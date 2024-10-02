@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>whether app</title>
+</head>
+<body>
+   <div class="container">
+    <div class="header">
+        <div class="search-box">
+            <input type="text"  placeholder="enter your loacation" class="input-box">
+        
+            <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+        </div>
+    </div>
+
+    <div class="location_not_found">
+        <h1>sorry your loacation does not found!!!</h1>
+        <img src="/images/404.png" alt="404 not found">
+    </div>
+
+    <div class="whether-body">
+        <img src="images/cloud.png" alt="whetherasImage" class="whether-img">
+
+    <div class="whether-box">
+        <p class="tempreture">0 <sup id="degree">°C</sup></p>
+        <p class="description">Light Rain</p>
+    </div>
+
+    <div class="whether-details">
+        
+        <div class="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <div class="text">
+                <span id="humidity">0%</span>
+                <p>humidity</p>
+            </div>
+        </div>
+
+        <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+                <span id="wind_speed">0Km/H</span>
+                <p>Wind Speed</p>
+            </div>
+        </div>
+
+        <!-- <div class="error">
+            <img src="404.png" alt="">
+        </div>
+         -->
+    </div>
+</div>
+   </div>
+   <script src="https://kit.fontawesome.com/be19e2f008.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

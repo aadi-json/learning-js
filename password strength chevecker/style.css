@@ -1,0 +1,27 @@
+*{
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+h2{
+    text-transform: capitalize;
+}
+#input{
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(53, 99, 99);
+}
+#output{
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-weight: 500;
+}

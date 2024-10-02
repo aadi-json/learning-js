@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+body{
+    height: 130vh;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+  background-color: black;
+}
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: white;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.search-box input{
+    width: 84%;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: black;
+    background-color: rgb(214, 214, 255);
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+.search-box input::placeholder{
+    color: black;
+}
+.search-box button{
+    height: 46px;
+    width: 46px;
+    background-color: rgb(124, 74, 218);
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+.search-box button:hover{
+    color: #fff;
+    background-color: #ababab;
+}
+.whether-body {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+}
+.whether-body img{
+    width: 60%;
+}
+.whether-box{
+    margin-block: 20px;
+    text-align: center;
+}
+.whether-box , .tempreture{
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+}
+#degree{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 200;
+}
+
+.whether-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.whether-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.whether-details .humidity ,.wind{
+    display: flex;
+    align-items: center;
+}
+.humidity{
+    margin-left: 20px;
+}
+.wind{
+    margin-right: 20px;
+}
+.whether-details i{
+    font-size: 35px;
+}
+.whether-details .text{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.location_not_found{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.location_not_found img{
+    width: 80%;
+    margin-top: 20px;
+}
+.location_not_found h1{
+    font-size: 20px;
+    margin-block: 20px;
+    color: red;
+}

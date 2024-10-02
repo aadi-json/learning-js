@@ -1,0 +1,57 @@
+*{
+    padding:0px ;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container input{
+    padding: 20px;
+    width: 60%;
+    margin-block: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid white;
+    background:transparent ;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+}
+.deal h1{
+    color:white ;
+    margin-bottom: 20px;
+}
+.container input::placeholder{
+    color: #68f368;
+    font-size: 20px;
+}
+.container input[type="date"]{
+    color: #68f368;
+    font-size: 20px;
+}
+.container button{
+    width: 30%;
+    padding: 10px;
+    font-size: 20px;
+}
+.container button{
+    background: transparent;
+    background-color: #68f368;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container button:hover{
+    background-color: #9cdd9c;
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+   background-color: cornflowerblue;
+   height: 100%;
+   width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-top: 15%;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+#clock{
+    background-color: orange;
+    height: 50px;
+    width: 190px;
+    margin-top: 20px;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

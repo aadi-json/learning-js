@@ -1,0 +1,43 @@
+body{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.container{
+    background-color: beige;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+h1{
+    text-decoration: underline;
+}
+#taskInput{
+    width: calc(100%-80%);
+    text-align: center;
+    border: 1px solid rgb(236, 223, 223);
+    outline: none;
+}
+#addButton{
+    background-color: rgb(72, 72, 237);
+    height: 20px;
+    border: none;
+    color: white;
+    border-radius: 2px;
+}
+.taskList{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete-button{
+    border: none;
+    color: red;
+}

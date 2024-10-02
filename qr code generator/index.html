@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>qr code generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>QR code generator</h2>
+
+      <input type="text" id="qr-input" placeholder="type to get the qr" />
+
+      <button id="qr-btn">click here to generate the qr code</button>
+
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" alt="" id="qr-img" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

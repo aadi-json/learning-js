@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable</title>
+
+<body>
+    <script>
+
+/*
+
+ 1.  
+ playing with number and charcter
+
+  let text1='A';
+   let text2='a';
+   let result= text1<text2;
+   console.log(result);
+     
+o/p:true
+
+   2.adding two string
+
+   const str1="helllo";
+   const str2="aditya";
+   const result=str1+ " " +str2;
+   console.log(result);
+   
+   o/p:hello aditya
+
+
+
+
+3.coversion and checking typr
+
+let a = '1';
+let b = '2';
+let result=Number(a+b);
+console.log(typeof result);
+
+o/p: Number
+
+4.while loop
+let i=0;
+while(i<=20){
+    console.log(i*2);
+    i++;
+}
+o/p: It will print 2's table
+
+5.do while loop
+
+let i=0
+do{
+    console.log(i);
+    i++
+} while(i<=10);
+
+o/p: It will print number upto 10
+
+ 6. fuction with parameter
+
+function myFunction(firstname,lastname) {
+console.log(firstname,lastname);
+}
+myFunction("aditya","gawande");
+
+o/p: adityagawande
+note:it assign value in order which they are written same goes with the number too
+
+7. fuction with parameter with integer value
+
+function myFunction(firstnum,secondnum) {
+console.log(firstnum,secondnum);
+}
+myFunction("100","200");
+
+o/p:100 200
+
+ 8. fuction with multilple parameter
+
+function myFunction(firstname,middlename,lastname,mothername) {
+    console.log(firstname,middlename,lastname,mothername);
+}
+       myFunction("aditya","santosh","gawande");
+
+o/p:adityasantoshgawande
+
+9. retun a value from a function
+
+function getNumber(a,b) {
+  return a*b;
+};
+console.log(getNumber(3,4));
+
+o/p:12
+
+10.function expression
+
+var add=function(num1,num2){
+    return num1+num2;
+}
+var result=add(10,20);
+console.log(result);
+
+o/p:30
+
+11. arrow function
+
+let square=num=>num*num;
+let result=square(6);
+console.log(result);
+
+op:36
+
+
+12.nasted function
+
+function Myfunction1(firstname,lastname) {
+    function Myfunction2() {
+
+    console.log("hello"  + " "+firstname,lastname);
+    }
+     return Myfunction2();   
+    }
+Myfunction1("aditya","gawande");
+
+op:hello adityagawande
+
+
+
+13.for of loop
+
+let arr=[10,20,30,"aditya",50];
+for( var val of arr){
+    console.log(val);
+
+    o/p:it wil print array
+
+}
+
+
+
+14.for in loop
+
+let arr=[10,20,30,40];
+for(var index in arr){
+  console.log(index);// o/p: will print the index
+  console.log(arr[index]);// o/p: print array with index
+}
+
+
+
+Topic:lexical scope
+// var a=10;
+function fun1(){
+    var a =10;
+    console.log("this is function 1 " +   a);
+
+    function fun2(){
+        // var a=10;
+    console.log("this is function 2 " +a);
+}
+fun2();
+}
+fun1();
+
+ Topic:Debugger
+function fun(){
+    debugger;
+    for (i=1;i<=5;i++)
+    console.log(i);
+}
+fun();
+
+
+Topic:Sets
+
+const arr = [10,20,30,30];
+console.log(arr); //note:display duplicate element
+
+const s = new Set([10,20,30,40,50]);
+s.add(60);
+s.add("hii")
+console.log(s);//note:does not display duplicate element
+
+//to find length of the set
+
+ length=0;
+for(let element of s){
+    length++
+}
+console.log(length);
+
+
+Topic:Maps
+
+let map1=new Map([[1,"one"],
+["fname","aditya"],["arr",[1,2,3,4,5]]]);
+
+//how to find keys
+
+var k=map1.keys();
+for(var key of k){
+    console.log(key);
+}
+
+//console.log(map1.get("arr"));
+//console.log(map1);
+
+//how to set a map
+
+var map2=new Map();
+map2.set("fname","aditya");
+console.log(map2);
+
+
+Topic:this keyword
+
+var obj={
+    fname:"aditya",
+    age:19,
+    fun:function(){
+
+    console.log(this.fname);//print saperately
+
+        console.log(this); //this will print complte object
+    }
+}
+obj.fun();
+
+Topic:new keyword
+
+function fun(){
+    let fname = "john";
+    return this       // here this keyword is an window object 
+}
+console.log(fun());
+
+//now this will work
+
+function fun(){
+    let fname = "john";
+this.fname=fname;      
+}
+var obj=new fun();
+console.log(obj.fname);//this will print saperte name of anything
+
+console.log(obj);//this will print complte object
+
+
+Topic:settime out
+console.log("this");
+console.log("aditya");
+setTimeout(()=>{
+ console.log("Asynchronous"); // here Asynchronous will print after 3sec
+},3000);
+
+//Another way
+ setTimeout(fun,3000) 
+ console.log("this");
+function fun(){
+    console.log("Asynchronous");
+}
+console.log("is");
+
+//Another way
+ setTimeout(fun,3000) 
+setTimeout(()=>{
+    console.log("is");
+},2000)
+ console.log("this");
+function fun(){
+    console.log("Asynchronous");
+}
+
+//callback
+ function fun(val){
+    console.log(val);
+ }
+ function add(a,b,callback){
+    let sum=a+b;
+    callback(sum);
+ }
+ add(2,3,fun)
+
+    Topic:resolve
+function fun(task){
+    return new Promise((resolve,reject)=>{
+    if (task) {
+    resolve ("completed")
+    }
+     else{
+    reject ("not cpmplted")
+    }
+}
+  )
+    }
+
+    let onResolve = (res)=>{
+        console.log(res);
+    }
+    let onReject = (err)=>{
+        console.log(err);
+    }
+    fun(false).then(onResolve).catch(onReject);
+    
+
+Topic:reject   
+function loadingData(){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(()=>{
+            console.log("1) loading...");
+            resolve();
+        },2000)
+    }
+)
+}
+function collectingData(){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(()=>{
+            console.log("2) colllecting....");
+            resolve();
+        },3000)
+    }
+)
+}
+function approvingData(){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(()=>{
+            console.log("3) approving..");
+            resolve();
+        },3000)
+    }
+)
+}
+function approved(){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(()=>{
+            console.log("4) approved...");
+            reject("errror not fullfilled");
+        },4000)
+    }
+)
+}
+loadingData().then(collectingData).then(approvingData).then(approved).catch((err)=>{
+    console.log(err);
+})
+
+
+Topic:settime interval
+var inter=setInterval(fun,1000);
+
+
+function fun(){
+    let date=new Date().toLocaleTimeString();
+    console.log(date);
+}
+setTimeout(()=>{
+    clearInterval(inter);
+},10000);
+
+Topic:call
+function fun(age,gender)
+    {
+        console.log(this.fname,age,gender)
+    }
+
+var obj1= {
+    fname: "john",
+  
+}
+var obj2={
+    fname:"kenny"
+}
+fun.call(obj2,12,"male");
+
+
+ Topc3:apply
+ 
+var obj1= {
+    fname: "john",
+  
+}
+var obj2={
+    fname:"kenny"
+}
+fun.apply(obj2,[12,"male"]);
+
+
+function fun(age,gender)
+    {
+        console.log(this.fname,age,gender)
+    }
+
+Topic:bind
+
+var obj1= {
+    fname: "john",
+  
+}
+var obj2={
+    fname:"kenny"
+}
+var a=fun.bind(obj2,[12,"male"]);
+console.log(a);
+
+//Topic:property falgs and description
+
+let emp={};
+emp.name="aditya";
+console.log(Object.getOwnPropertyDescriptor(emp,"name"));
+
+Object.defineProperty(emp,"age",
+{
+    value:19,
+    writable:false,
+    configurable:false,
+    enumerable:false
+})
+for(let k in emp){
+    console.log(k);
+}
+console.log(Object.getOwnPropertyDescriptor(emp,"age"));
+
+//Topic:__proto__
+
+var obj1={
+    fname:"aditya",
+};
+var obj2={
+    lname:"gawande",
+};
+obj2. __proto__= obj1;
+console.log(obj1);
+
+//Topic:class
+
+class Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    greet(){
+        console.log(`hello ${this.name}`);
+    }
+}
+
+let user=new Person("aditya",20)
+console.log(user);
+user.greet();
+
+//Topic:inheritance
+
+
+class Animal{
+    constructor(name){
+        this.name=name;
+    }
+    speak(){
+        console.log(`${this.name} makes a noise`);
+    }
+}
+
+class Dog extends Animal{
+    constructor(name){
+        this.name=name;
+    }
+}
+let d= new Animal("animal");
+d.speak();
+
+//Topic: inheritance using super keyword
+
+
+class Animal{
+    constructor(name){
+        this.name=name;
+    }
+    speak(){
+        console.log(`${this.name} makes a noise`);
+    }
+}
+
+class Dog extends Animal{
+    constructor(name){
+    super(name);
+    }
+}
+let d= new Dog("Huskey");
+d.speak();
+
+fetch('https://reqres.in/api/users')
+  .then(response => response.json())
+  .then(data => {
+    data.data.forEach(user => {
+      console.log(`${user.id}: ${user.first_name} ${user.last_name}`)
+    })
+  })
+
+//Topic: Dom elment selector:query selector
+
+let h2= document.querySelector("h2");
+h2.innerText=h2.innerText + "by aditya gawande";
+console.dir(h2); // here dir gives the output in object form. we can also use the log here
+
+//Topic:append/prepend/after/before
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "click me";
+console.log(newBtn); 
+
+let div = document.querySelector("div");
+div.append(newBtn); // here we can use append/prepend/after/before
+
+//Topic:list class
+
+
+let para = document.querySelector("p");
+
+para.classList.add("myclass");
+
+</script>
+</body>
+
+</html>

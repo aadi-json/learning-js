@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=width=device-width, initial-sca"le=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>form validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="sighup-header">
+          <h1>Sign Up</h1>
+        </header>
+
+        <main class="sighup-body">
+          <form action="#">
+            <p>
+              <label for="name">Full name</label>
+              <input type="text" placeholder="enter your name" id="name" />
+              <span id="nameError"></span>
+            </p>
+
+            <p>
+              <label for="email">Email</label>
+              <input type="email" placeholder="xyz@gamil.com" id="email"/>
+              <span id="emailError"></span>
+            </p>
+
+            <p>
+              <label for="password">password</label>
+              <input
+                type="password"
+                placeholder="enter at least 8 character"
+                id="password"/>
+                <span id="passError"></span>
+            </p>
+
+            <p>
+                <input type="submit" value="create accout" id="submitbtn">
+            </p>
+          </form>
+        </main>
+
+        <footer class="signup-footer">
+            <p>already have an accout?? <a href="">login</a> </p>
+        </footer>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/be19e2f008.js" crossorigin="anonymous"></script>
+  </body>
+</html>
